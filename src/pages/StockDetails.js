@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function StockDetails() {
   const { date } = useParams();
@@ -7,6 +7,8 @@ function StockDetails() {
   const stock = stockList.find((item) => item.date === date);
   return (
     <div>
+      <Link to="/">Back</Link>
+
       <h3>
         Stock details on -
         {date}

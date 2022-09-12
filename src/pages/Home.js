@@ -6,7 +6,6 @@ function Home() {
   return (
     <div>
       {stockList.map((stock) => (
-
         <Stock key={stock.date} date={stock.date} />
       ))}
     </div>

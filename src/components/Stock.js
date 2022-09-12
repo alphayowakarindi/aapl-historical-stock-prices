@@ -1,10 +1,10 @@
-// import { PropTypes } from 'prop-types';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Stock = ({ date }) => (
   <div>
     <h3>
-      {date}
+      <Link to={`/stock-details/${date}`}>{date}</Link>
     </h3>
   </div>
 );

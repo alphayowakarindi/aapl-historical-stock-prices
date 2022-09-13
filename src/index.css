@@ -114,3 +114,13 @@ svg {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+#footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#footer a {
+  color: #fff;
+  font-size: 22px;
+}

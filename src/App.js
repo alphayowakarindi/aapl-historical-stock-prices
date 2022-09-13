@@ -60,6 +60,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="stock-details/:date" element={<StockDetails />} />
       </Routes>
+      <footer id="footer">
+        <a href="https://financialmodelingprep.com/developer/docs/.">
+          Data provided by Financial Modeling Prep
+        </a>
+      </footer>
     </div>
   );
 }

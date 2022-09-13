@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // Actions
 const GET_STOCK_HISTORY = 'aapl-historical-stock-prices/stockHistory/GET_STOCK_HISTORY ';
 // Api
-const url = 'https://financialmodelingprep.com/api/v3/historical-price-full/AAPL?apikey=995fb2d57bb2422e6cef63548876f3ee';
+const url = 'https://financialmodelingprep.com/api/v3/historical-price-full/AAPL?apikey=5e8de55d316fcc9a05df7bcd5fb087d1';
 
 // Redux thunks
 export const fetchStockHistory = createAsyncThunk(

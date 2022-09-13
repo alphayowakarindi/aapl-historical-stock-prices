@@ -5,3 +5,33 @@
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #ec448a;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 900;
+}
+
+nav {
+  height: 50px;
+  margin: 2% 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.nav-svgs {
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

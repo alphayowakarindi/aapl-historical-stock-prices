@@ -8,11 +8,7 @@
 }
 
 body {
-  background-color: #ec448a;
-}
-
-.app {
-  padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -21,15 +17,27 @@ h1 {
 }
 
 nav {
-  height: 50px;
-  margin: 2% 1%;
+  height: 65px;
+  padding: 2% 1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ec448a;
+  color: #fff;
 }
 
 svg {
   color: #fff;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left svg {
+  position: relative;
+  top: 5px;
 }
 
 .nav-svgs svg {
@@ -38,15 +46,21 @@ svg {
 }
 
 .nav-svgs {
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+nav .year {
+  font-weight: 700;
+  font-size: 22px;
+}
+
 .home-loading {
   text-align: center;
-  margin-top: 30vh;
+  height: calc(100vh - 65px);
+  padding-top: 30vh;
+  background-color: #ec448a;
 }
 
 .home-loading span {
@@ -58,14 +72,37 @@ svg {
 .stock-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  overflow-x: hidden;
+}
+
+.stock-container div:nth-child(even) {
+  background-color: rgba(236, 68, 138, 0.9);
+}
+
+.stock-container div:nth-child(odd) {
+  background-color: rgba(236, 68, 138, 0.8);
 }
 
 .stock {
   padding: 10px 50px;
-  margin: 12px 0;
   color: #fff;
-  display: flex;
+  position: relative;
+  height: 120px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.stock a {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.stock h3 {
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
 }
 
 .stock svg {
@@ -73,9 +110,9 @@ svg {
   cursor: pointer;
 }
 
-.stock a {
-  text-decoration: none;
-  color: #fff;
+.stock-details-container {
+  min-height: calc(100vh - 65px);
+  background-color: #ec448a;
 }
 
 .stock-details-container h3 {
@@ -88,7 +125,7 @@ svg {
 
 .stock-details-container .details {
   margin: auto;
-  margin-top: 50px;
+  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: start;
@@ -108,14 +145,18 @@ svg {
 
   .stock-details-container .details {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 10px;
+    padding: 50px 10px 0 10px;
   }
 }
 
 /* Small screen size */
 @media (max-width: 500px) {
   .stock-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stock {
+    border: none;
   }
 }
 

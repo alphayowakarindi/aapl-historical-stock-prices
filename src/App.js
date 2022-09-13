@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import StockDetails from './pages/StockDetails';
 import { fetchStockHistory } from './redux/stockHistory/stockHistory';
@@ -13,8 +13,28 @@ function App() {
   return (
     <div className="app">
       <nav>
-        <h1>AAPL Daily Stock Prices</h1>
-
+        <div className="left">
+          <Link to="/">
+            <svg
+              width="40px"
+              height="40px"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 30 30"
+              strokeWidth={2.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </Link>
+          <div className="year">2022</div>
+        </div>
+        <span>stock prices</span>
         <div className="nav-svgs">
           <svg
             width="30px"
@@ -60,11 +80,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="stock-details/:date" element={<StockDetails />} />
       </Routes>
-      <footer id="footer">
-        <a href="https://financialmodelingprep.com/developer/docs/.">
-          Data provided by Financial Modeling Prep
-        </a>
-      </footer>
     </div>
   );
 }

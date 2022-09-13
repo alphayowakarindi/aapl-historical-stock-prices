@@ -10,7 +10,7 @@ export const fetchStockHistory = createAsyncThunk(
   async () => {
     const response = await fetch(url);
     const data = await response.json();
-    const stockHistoryArr = data.historical.slice(0, 30);
+    const stockHistoryArr = data.historical.slice(0, 28);
     return stockHistoryArr;
   },
 );

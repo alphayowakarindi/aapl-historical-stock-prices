@@ -4,7 +4,7 @@ import Stock from '../components/Stock';
 function Home() {
   const stockList = useSelector((store) => store.stock);
   return (
-    <div>
+    <div className="stock-container">
       {stockList.map((stock) => (
         <Stock key={stock.date} date={stock.date} />
       ))}

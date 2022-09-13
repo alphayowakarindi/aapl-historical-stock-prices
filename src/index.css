@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ nav {
   justify-content: space-between;
 }
 
-svg {
+.nav-svgs svg {
   cursor: pointer;
   margin: 0 5px;
 }
@@ -34,4 +35,41 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.stock-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.stock {
+  padding: 10px 50px;
+  margin: 12px 0;
+  color: #fff;
+  display: flex;
+}
+
+.stock svg {
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.stock a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Medium screen size */
+@media (max-width: 768px) {
+  .stock-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screen size */
+@media (max-width: 500px) {
+  .stock-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

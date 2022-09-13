@@ -7,7 +7,7 @@ function Home() {
     return (
       <div className="stock-container">
         {stockList.map((stock) => (
-          <Stock key={stock.date} date={stock.date} />
+          <Stock key={stock.date} date={stock.date} change={stock.change} />
         ))}
       </div>
     );

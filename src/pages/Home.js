@@ -3,11 +3,18 @@ import Stock from '../components/Stock';
 
 function Home() {
   const stockList = useSelector((store) => store.stock);
+  if (stockList.length > 0) {
+    return (
+      <div className="stock-container">
+        {stockList.map((stock) => (
+          <Stock key={stock.date} date={stock.date} />
+        ))}
+      </div>
+    );
+  }
   return (
-    <div className="stock-container">
-      {stockList.map((stock) => (
-        <Stock key={stock.date} date={stock.date} />
-      ))}
+    <div className="home-loading">
+      <span>Loading...</span>
     </div>
   );
 }

@@ -2,6 +2,10 @@
 
 exports[`renders when the home component matches snapshot 1`] = `
 <div
-  className="stock-container"
-/>
+  className="home-loading"
+>
+  <span>
+    Loading...
+  </span>
+</div>
 `;

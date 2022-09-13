@@ -40,6 +40,17 @@ svg {
   align-items: center;
 }
 
+.home-loading {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+.home-loading span {
+  font-size: 32px;
+  letter-spacing: 7px;
+  color: #fff;
+}
+
 .stock-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

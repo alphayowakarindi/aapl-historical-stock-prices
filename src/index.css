@@ -24,13 +24,16 @@ nav {
   justify-content: space-between;
 }
 
+svg {
+  color: #fff;
+}
+
 .nav-svgs svg {
   cursor: pointer;
   margin: 0 5px;
 }
 
 .nav-svgs {
-  color: #fff;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -60,10 +63,37 @@ nav {
   color: #fff;
 }
 
+.stock-details-container h3 {
+  color: #fff;
+}
+
+.stock-details-container .back {
+  display: flex;
+}
+
+.stock-details-container .details {
+  margin: auto;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: start;
+  max-width: 1100px;
+  row-gap: 50px;
+}
+
+.stock-details-container .details span {
+  color: #fff;
+}
+
 /* Medium screen size */
 @media (max-width: 768px) {
   .stock-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stock-details-container .details {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
   }
 }
 

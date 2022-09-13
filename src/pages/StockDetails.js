@@ -6,13 +6,29 @@ function StockDetails() {
   const stockList = useSelector((store) => store.stock);
   const stock = stockList.find((item) => item.date === date);
   return (
-    <div>
-      <Link to="/">Back</Link>
+    <div className="stock-details-container">
+      <div className="back">
+        <Link to="/">
+          <svg
+            width="30px"
+            height="30px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 30 30"
+            strokeWidth={2.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </Link>
 
-      <h3>
-        Stock details on -
-        {date}
-      </h3>
+        <h3>{date}</h3>
+      </div>
       <div className="details">
         <span>
           Open:

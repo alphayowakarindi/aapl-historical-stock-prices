@@ -11,7 +11,7 @@ function App() {
     dispatch(fetchStockHistory());
   });
   return (
-    <div>
+    <div className="app">
       <nav>
         <h1>AAPL Daily Stock Prices</h1>
 

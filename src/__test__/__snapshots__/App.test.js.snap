@@ -15,11 +15,11 @@ exports[`renders when the app component matches snapshot 1`] = `
         <svg
           className="w-6 h-6"
           fill="none"
-          height="40px"
+          height="25px"
           stroke="currentColor"
           strokeWidth={2.5}
           viewBox="0 0 30 30"
-          width="40px"
+          width="25px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

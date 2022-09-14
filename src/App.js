@@ -16,8 +16,8 @@ function App() {
         <div className="left">
           <Link to="/">
             <svg
-              width="40px"
-              height="40px"
+              width="25px"
+              height="25px"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 30 30"

@@ -8,24 +8,31 @@
 }
 
 body {
-  background-color: #ec448a;
-}
-
-h1 {
-  color: #fff;
-  font-weight: 900;
+  overflow-x: hidden;
 }
 
 nav {
-  height: 50px;
-  margin: 2% 1%;
+  height: 65px;
+  padding: 2% 1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(236, 68, 138, 0.9);
+  color: #fff;
 }
 
 svg {
   color: #fff;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left svg {
+  position: relative;
+  top: 5px;
 }
 
 .nav-svgs svg {
@@ -34,15 +41,47 @@ svg {
 }
 
 .nav-svgs {
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+nav .year {
+  position: relative;
+  right: 5px;
+}
+
+/* header */
+.header {
+  background-color: #ec448a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+}
+
+.header .header-img {
+  display: grid;
+  justify-content: end;
+}
+
+.header .header-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.header img {
+  width: 100%;
+}
+
 .home-loading {
   text-align: center;
-  margin-top: 30vh;
+  height: calc(100vh - 65px);
+  padding-top: 30vh;
+  background-color: #ec448a;
 }
 
 .home-loading span {
@@ -54,14 +93,41 @@ svg {
 .stock-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  overflow-x: hidden;
+  background-color: rgba(236, 68, 138, 0.9);
+  min-height: 50vh;
+}
+
+.stock-container div {
+  background-color: rgba(236, 68, 138, 1);
 }
 
 .stock {
   padding: 10px 50px;
-  margin: 12px 0;
   color: #fff;
-  display: flex;
+  position: relative;
+  height: 120px;
+  border: solid 2px rgba(255, 255, 255, 0.1);
+}
+
+.stock a {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.stock h3 {
+  position: absolute;
+  bottom: 40px;
+  right: 5px;
+}
+
+.stock .change {
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
 }
 
 .stock svg {
@@ -69,9 +135,9 @@ svg {
   cursor: pointer;
 }
 
-.stock a {
-  text-decoration: none;
-  color: #fff;
+.stock-details-container {
+  min-height: calc(100vh - 65px);
+  background-color: #ec448a;
 }
 
 .stock-details-container h3 {
@@ -84,7 +150,7 @@ svg {
 
 .stock-details-container .details {
   margin: auto;
-  margin-top: 50px;
+  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: start;
@@ -96,6 +162,69 @@ svg {
   color: #fff;
 }
 
+/* stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(236, 68, 138, 0.9);
+  color: #fff;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn .btn-text {
+  margin-right: 3px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  min-width: 150px;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown-content button {
+  background-color: transparent;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
 /* Medium screen size */
 @media (max-width: 768px) {
   .stock-container {
@@ -104,23 +233,13 @@ svg {
 
   .stock-details-container .details {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 10px;
+    padding: 50px 10px 0 10px;
   }
 }
 
 /* Small screen size */
 @media (max-width: 500px) {
   .stock-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-#footer {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#footer a {
-  color: #fff;
-  font-size: 22px;
 }

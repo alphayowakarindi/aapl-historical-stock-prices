@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Stock = ({ date }) => (
+const Stock = ({ date, change }) => (
   <div className="stock">
     <h3>{date}</h3>
+    <span className="change">{change}</span>
     <Link to={`/stock-details/${date}`}>
       <svg
         width="24px"
@@ -29,4 +30,6 @@ export default Stock;
 
 Stock.propTypes = {
   date: PropTypes.string.isRequired,
+  change: PropTypes.number.isRequired,
+
 };

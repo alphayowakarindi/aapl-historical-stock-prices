@@ -1,11 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders when the app component matches snapshot 1`] = `
-<div>
+<div
+  className="app"
+>
   <nav>
-    <h1>
-      AAPL Daily Stock Prices
-    </h1>
+    <div
+      className="left"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          height="25px"
+          stroke="currentColor"
+          strokeWidth={2.5}
+          viewBox="0 0 30 30"
+          width="25px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </a>
+      <div
+        className="year"
+      >
+        2022
+      </div>
+    </div>
+    <span>
+      stock prices
+    </span>
     <div
       className="nav-svgs"
     >

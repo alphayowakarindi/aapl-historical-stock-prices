@@ -17,9 +17,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #ec448a; */
   background-color: rgba(236, 68, 138, 0.9);
-
   color: #fff;
 }
 
@@ -61,15 +59,12 @@ nav .year {
   color: #fff;
 }
 
-.header div {
-  /* border: solid 2px rgba(255, 255, 255, 0.1); */
-}
-.header div:nth-child(1) {
+.header .header-img {
   display: grid;
   justify-content: end;
 }
 
-.header div:nth-child(2) {
+.header .header-info {
   height: 100%;
   width: 100%;
   display: flex;
@@ -77,6 +72,7 @@ nav .year {
   justify-content: center;
   padding-left: 20px;
 }
+
 .header img {
   width: 100%;
 }
@@ -98,15 +94,9 @@ nav .year {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   overflow-x: hidden;
-}
-
-/* .stock-container div:nth-child(even) {
   background-color: rgba(236, 68, 138, 0.9);
+  min-height: 50vh;
 }
-
-.stock-container div:nth-child(odd) {
-  background-color: rgba(236, 68, 138, 0.8);
-} */
 
 .stock-container div {
   background-color: rgba(236, 68, 138, 1);
@@ -172,6 +162,70 @@ nav .year {
   color: #fff;
 }
 
+/* stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(236, 68, 138, 0.9);
+  color: #fff;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn .btn-text {
+  margin-right: 3px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  min-width: 150px;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown-content button {
+  background-color: transparent;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
 /* Medium screen size */
 @media (max-width: 768px) {
   .stock-container {
@@ -189,17 +243,4 @@ nav .year {
   .stock-container {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-#footer {
-  text-align: center;
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-}
-
-#footer a {
-  color: #fff;
-  font-size: 22px;
 }

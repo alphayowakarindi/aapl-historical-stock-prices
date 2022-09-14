@@ -3,10 +3,10 @@ import img from '../images/stock.png';
 function Header() {
   return (
     <div className="header">
-      <div>
+      <div className="header-img">
         <img src={img} alt="" />
       </div>
-      <div>
+      <div className="header-info">
         <h3>2022-09-13</h3>
         <span>-6.06</span>
       </div>

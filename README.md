@@ -1,4 +1,4 @@
-# Annual Diabetes Walk
+# AAPL
 
 > This is a website to show the history of stock prices of AAPL company.
 
